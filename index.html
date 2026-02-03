@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Analytics Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Employee Data Analysis (500 Staffs)</h1>
+        </header>
+
+        <div class="summary-grid">
+            <div class="card">
+                <h3>Total Employees</h3>
+                <p id="total-staff">500</p>
+            </div>
+            <div class="card">
+                <h3>Avg. Salary</h3>
+                <p id="avg-salary">0</p>
+            </div>
+            <div class="card">
+                <h3>Avg. Score</h3>
+                <p id="avg-score">0</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="charts-section">
+                <div class="chart-container">
+                    <canvas id="deptChart"></canvas>
+                </div>
+            </div>
+
+            <div class="table-section">
+                <div class="table-controls">
+                    <input type="text" id="searchInput" placeholder="Search by name or ID...">
+                    <div class="pagination">
+                        <button id="prevBtn">Previous</button>
+                        <span id="pageInfo">Page 1 of 34</span>
+                        <button id="nextBtn">Next</button>
+                    </div>
+                </div>
+                <div class="table-wrapper">
+                    <table id="staffTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Department</th>
+                                <th>Salary (THB)</th>
+                                <th>Score</th>
+                                <th>Join Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
